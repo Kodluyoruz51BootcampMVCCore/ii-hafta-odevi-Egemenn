@@ -2,8 +2,7 @@
 
 ## 6 Haziran Ödevleri:
 - [ ] Github'ın Gitflow'u ile diğer yaklaşımları arasındaki fark nedir? ( gitflow vs ..)
-        
-        Git flow, yazılım geliştirmenin her aşamasını kolayca yönetmek için farklı dallarla çalışır, yazılımınızın “sürüm” kavramına sahip olması durumunda kullanılması önerilir, çünkü bu kavramın eksik olduğu Continuous Delivery veya Continuos Deployment ortamında çalışırken en iyi karar değildir. Bu akışın bir başka iyi yanı, ekiple birlikte çalışırken ve bir veya daha fazla geliştiricinin aynı özellik için işbirliği yapması gerektiğinde mükemmel uyum sağlamasıdır.
+        - Git flow, yazılım geliştirmenin her aşamasını kolayca yönetmek için farklı dallarla çalışır, yazılımınızın “sürüm” kavramına sahip olması durumunda kullanılması önerilir, çünkü bu kavramın eksik olduğu Continuous Delivery veya Continuos Deployment ortamında çalışırken en iyi karar değildir. Bu akışın bir başka iyi yanı, ekiple birlikte çalışırken ve bir veya daha fazla geliştiricinin aynı özellik için işbirliği yapması gerektiğinde mükemmel uyum sağlamasıdır.
 
 - [ ] [Git and GitHub with Briana Swift](https://www.youtube.com/playlist?list=PLg7s6cbtAD17Gw5u8644bgKhgRLiJXdX4) Youtube Listesi incelensin. (11 Video)
 - [ ] Merge pull request
