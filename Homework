@@ -1,0 +1,33 @@
+**6 Haziran Ödevleri**
+
+**Git Flow**
+
+Git flow, yazılım geliştirmenin her aşamasını kolayca yönetmek için farklı dallarla çalışır, yazılımınızın &quot;sürüm&quot; kavramına sahip olması durumunda kullanılması önerilir, çünkü bu kavramın eksik olduğu Continuous Delivery veya Continuous Deployment ortamında çalışırken en iyi karar değildir. Bu akışın bir başka iyi yanı, ekiple birlikte çalışırken ve bir veya daha fazla geliştiricinin aynı özellik için işbirliği yapması gerektiğinde mükemmel uyum sağlamasıdır.
+
+**Merge Pull Request**
+
+- Create Merge Commit, tüm commitleri historyde tutar ve master branch&#39;a taşır. Squash and Merge, tüm commitleri tek bir committe gruplandırır. Rebase and Merge, History&#39;deki tüm commitleri master branch&#39;in önüne ekler.
+
+- Merge Commit ve Squash and merge son işlemde ekstra commit ekler, rebase and merge ise eklemez.
+
+**AspNet Boilerplate - Web Application Framework** (https://aspnetboilerplate.com/)
+
+ASP.NET Boilerplate, özellikle yeni modern web uygulamaları için tasarlanmış genel amaçlı bir uygulama çerçevesidir. Tanıdık araçlar kullanır ve size bir SOLID geliştirme deneyimi sunmak için etraflarındaki en iyi uygulamaları uygular.
+
+**7 Haziran Ödevleri**
+
+**Razor Pages**
+
+Razor Pages, mvc (model view controller)&#39;a göre daha kolay uygulama geliştirmeyi sağlayan bir platformdur. Frontend çatılarda kullanılan yaklaşım olan model view view model (mvvm) yapısına benzeşen two way binding özelliğini desteklemektedir.
+
+  **C# Json Serialize/Deserialize**
+
+**Serialization** , nesnelerin çalışma zamanındaki (runtime) durumlarını alıp geçici veya kalıcı olarak bir kaynağa (_file,memory, database, socket, buffer_ vb.) saklamak/transfer etmek için belirli bir forma dönüştürülüp yazma işlemidir. **Deserialization** , bir kaynakta (_file,memory, database, socket, buffer_ vb.) bulunan serileştirilmiş (serialize) belirli bir formdaki nesnelerin, ihtiyaç olduğunda çalışma zamanındaki durumunu elde etme işlemidir.
+
+**MVP vs MVC vs MVU**
+
+MVP Pattern&#39;i MVC&#39;den evrilmiş bir patterndir, sadece bağımlılıklar değişir ve Controller&#39;ın yerine Prenseter (ki bu durumda kendisine hala Controller denebiliyor) gelir. Inputları direkt View karşılar, modern programlama ortamlarının mantığına daha uygundur. View Presenter&#39;ını biliyor, Presenter ise View&#39;i bir interface aracılığıyla biliyor aralarında bir abstraction var. Ayrıca MVC&#39;nin aksine View ile Presenter arasında 1–1 ilişki var. Presenter Model&#39;i manipule ediyor, Model&#39;in değişikleri Presenter&#39;a notify etme durumu birazcık tartışmalı, etmeyedebilir, Presenter ilgili değişikliği yapıp, View&#39;i kendisi güncelleyebilir. Zaten buradaki en büyük fark MVC&#39;nin aksine Presenter&#39;ın View&#39;i bir interface aracılığıyla kendisinin güncellemesi, View burada Presenter&#39;a interface aracılığıyla istediği bilgiyi açabilir, ister Textbox&#39;ın Text&#39;i olsun ister Buton&#39;ın Enabled&#39;ı olsun. Presenter View&#39;in nasıl bir View, Web mi? Windows mu? olduğuyla ilgilenmiyor, sadece data akışıyla ilgili ne yapması gerektiğini, View&#39;den gelen etkileşimleri nasıl karşılaması gerektiğini ve View&#39;de nasıl değişikler yapması gerektğini biliyor. Yani Prensenter&#39;ımız burada karar mekanizaması rölünü üstleniyor.
+
+MVC, Model, View, Controller&#39;dır. Controller kullanıcıdan gelen inputları karşılar, ayrıca UI ile ilgili bütün akışı yönetir ve kararları verir. Controller View hakkında hiç birşey bilmez ama View Controller&#39;ı bilir. Görüldüğü üzere Controller ile View arasında 1-n bir ilişki var yani bir Controller birden fazla View tarafından kullanılabilir. Controller kullanıcıdan gelen inputlar doğrultusunda Model üzerinde değişikleri yapar, Model değiştiğini View&#39;e notify eder yani View ile Model arasında Observer ilişkisi var. View, Model&#39;e register olur, görüldüğü üzere bir model&#39;e birden fazla View register olabilir. Aralarında ki observer ilişkisi sayesinde, Model&#39;deki herangi bir değişiklik ona register olmuş bütün View&#39;lere yansır.
+
+Şeması birazcık MVP&#39;yi andırıyor fakat buradaki fark, Presentation Model hem View ile ilgili stateleri tutuyor hemde View hakkında hiç birşey bilmiyor. Aslında PM View&#39;in state ve davranışlarıyla ilgili bilgiyi kendi üzerine alıyor ve Business Layer ile arasındaki kordinasyonu sağlıyor ve View&#39;e karar vermeyle ilgili çok az şey bırakıyor. View yine stateleri tutuyor aslında. Fakat MVP&#39;nin aksine Presentation Model View ile ilgili hiç bir bilgiye ihtiyaç duymuyor, bu yüzden ki View ile PM arasında 1-n bir ilişki var, bir PM birden fazla View&#39;de kullanılabiliyor, bu kısmıyla MVC&#39;ye benziyor, fakat MVC&#39;nin aksine View üzerinde ki manipulasyonlar PM üzerinden gerçekleşiyor. Aslında şöylede bakabiliriz, PM ile View arasında yine bir observer ilişkisi var, .Net&#39;e kullanım şekillerinden biride  **INotifyPropertyChanged**  interface&#39;inden türeyip, .Net&#39;in binding alt yapısını kullanması. Zaten özünde yaptığı iş DataBinding. Kendi propertylerini View&#39;in propertyleriyle senkronize ediyor, aynı zamanda state&#39;lerede karar veriyor, mesela şu şu TextBox dolduğunda şu Buton enabled olsun gibi. Tabi herzaman enabled olucak bir kontrol&#39;un state&#39;ini PM&#39;de tutmak anlamsız. Yukarıda da bahsettiğim gibi MVVM PM ile aynı prensip üzerine kurulu ama WPF ve Silverlight&#39;da ki XAML ve Binding alt yapısına optimize bir şekilde düzenlenmiş olması. Yukarda da bahsettiğim gibi PM&#39;in tek dez avantajı elde uygun bir binding mekanizması yoksa çok fazla bu iş ile ilgili kod yazılması. Windows Forms&#39;un bir binding alt yapısı var ama WPF&#39;in Binding alt yapısı çok üstün, çok yetenekli. En basidinden WPF&#39;de herangi bir UI Elementinin (bkz : XAML) herangi bir propertysini bir .NET nesnesinin property ve ya methoduna bind edebiliyorsunuz ayrıca bir karar mekanizmasına sahip Command alt yapısıda var.
