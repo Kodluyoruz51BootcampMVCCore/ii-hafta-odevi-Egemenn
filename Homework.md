@@ -18,7 +18,7 @@ Merge, History'deki tüm commitleri master branch’in önüne ekler.
 \- Merge Commit ve Squash and merge son işlemde ekstra commit ekler, rebase and
 merge ise eklemez.
 
-[AspNet Boilerplate - Web Application Framework](https://aspnetboilerplate.com/)
+**AspNet Boilerplate - Web Application Framework**
 
 ASP.NET Boilerplate, özellikle yeni modern web uygulamaları için tasarlanmış
 genel amaçlı bir uygulama çerçevesidir. Tanıdık araçlar kullanır ve size bir
