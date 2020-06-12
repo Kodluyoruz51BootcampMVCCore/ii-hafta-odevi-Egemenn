@@ -33,7 +33,7 @@ Razor Pages, mvc (model view controller)'a göre daha kolay uygulama geliştirme
 sağlayan bir platformdur. Frontend çatılarda kullanılan yaklaşım olan model view
 view model (mvvm) yapısına benzeşen two way binding özelliğini desteklemektedir.
 
-** C\# Json Serialize/Deserialize**
+**C\# Json Serialize/Deserialize**
 
 **Serialization**, nesnelerin çalışma zamanındaki (runtime) durumlarını alıp
 geçici veya kalıcı olarak bir kaynağa (*file,memory, database, socket,
