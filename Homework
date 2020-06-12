@@ -1,6 +1,6 @@
-## 6 Haziran Ödevleri ##
+## 6 Haziran Ödevleri 
 
-#### Git Flow ####
+#### Git Flow 
 
 Git flow, yazılım geliştirmenin her aşamasını kolayca yönetmek için farklı dallarla çalışır, yazılımınızın &quot;sürüm&quot; kavramına sahip olması durumunda kullanılması önerilir, çünkü bu kavramın eksik olduğu Continuous Delivery veya Continuous Deployment ortamında çalışırken en iyi karar değildir. Bu akışın bir başka iyi yanı, ekiple birlikte çalışırken ve bir veya daha fazla geliştiricinin aynı özellik için işbirliği yapması gerektiğinde mükemmel uyum sağlamasıdır.
 
