@@ -6,7 +6,7 @@
 - [ ] Merge pull request
     - [ ] Create a merge commit
     - [ ] Squash and merge 
-    - [ ] Rebase and merge altında ne fark var (Ödev)
+    - [ ] Rebase and merge altında ne fark var (Ödev)    
 - [ ] issue ve #pull request de id ler neden artıyor farklı sekmeler olmasına rağmen?
 - [ ] [Ramp up on Git and GitHub](https://lab.github.com/githubtraining/paths/ramp-up-on-git-and-github) (ödev)
 - [ ] Aspnetboilerplate ve yan ürünler araştırması. [AspNet Boilerplate - Web Application Framework](https://aspnetboilerplate.com/)
@@ -22,5 +22,5 @@
 - [ ] Ayarlardaki Output kısmındaki Console Application nedir? diğerleri arasında fark nedir? [Ders Akışındaki 6. Madde'yi inceleyin.] ( araştırma ödev verildi ).
 - [ ] c# json serialize / deserialize
 - [ ] MVC vs MVVM
-   - [ ] MVP vs MVW vs MVU Pattern arasındaki farkı araştır
+   - [ ] MVP vs MVW vs MVU Pattern arasındaki farkı araştır  
    - [ ] Model-View-Update (MVU) nedir?
